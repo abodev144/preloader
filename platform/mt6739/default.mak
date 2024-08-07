@@ -101,7 +101,7 @@ endif
 # LOG_LEVEL_INFO       (3)
 # LOG_LEVEL_DEBUG      (4)
 # Any log messages with levels less than and equal to this will be printed.
-CFG_LOG_LEVEL :=3
+CFG_LOG_LEVEL :=5
 
 ###################################################################
 # image loading options
