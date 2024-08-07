@@ -35,8 +35,10 @@ jobs:
 
     - name: Build the bootloader
       run: |
+        export PATH=~/gcc-toolchain/bin:$PATH
+        export CROSS_COMPILE=~/gcc-toolchain/bin/arm-linux-androideabi-
         export python=python2
-        MTK_PROJECT=k39tv1_bsp_1g PRELOADER_OUT=`pwd`/build-k39tv1_bsp_1g CROSS_COMPILE=~/gcc-toolchain/bin/arm-linux-androideabi- make
+        MTK_PROJECT=k39tv1_bsp_1g PRELOADER_OUT=`pwd`/build-k39tv1_bsp_1g make
 
     - name: Upload bootloader
       uses: actions/upload-artifact@v3
